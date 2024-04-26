@@ -1,3 +1,10 @@
+.master{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf6ff;
+}
+
 .lst-kix_list_1-1 > li {
     counter-increment: lst-ctn-kix_list_1-1;
   }
