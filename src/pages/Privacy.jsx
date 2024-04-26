@@ -1,5 +1,12 @@
+
 const Privacy = () => {
-  return <h1>Privacy statement</h1>;
+  return (
+    <>
+      <h1 className="heading">Privacy Statement</h1>
+
+  
+    </>
+  );
 };
 
 export default Privacy;
