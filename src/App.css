@@ -1,62 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html,
 body,
 #app,
 #app > div {
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
 }
 :root {
-  height: 100vh;
-  background-color: #faf6ff;
+	height: 100vh;
+	background-color: #faf6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 84svh;
+  overflow: scroll;
 }
 
 .navContainer {
-  width: 100%;
-  height: 8vh;
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
+	width: 100%;
+	height: 8svh;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
 }
 
 .navLink {
-  font-size: min(30px, 5vw);
-  align-content: center;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
+	font-size: min(30px, 5vw);
+	align-content: center;
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
 }
 
 .navLink:active {
-  font-weight: 600;
-  color: blueviolet;
+	font-weight: 600;
+	color: blueviolet;
+}
+
+.footerContainer {
+	width: 100%;
+	height: 8svh;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.footerLink {
+	font-size: min(20px, 3vw);
+	align-content: center;
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+
+.footerLinkActive {
+	font-size: min(20px, 3vw);
+	align-content: center;
+	text-decoration: none;
+	font-weight: 600;
+	color: blueviolet;
+}
+
+.footerLink:hover {
+	color: blueviolet;
 }
 
 .heading {
-  font-size: min(40px, 8vw);
-  text-align: center;
-  color: #b56de4;
+	font-size: min(40px, 8vw);
+	text-align: center;
+	color: #b56de4;
 }
 
 .homeDescription {
-  font-size: min(30px, 6vw);
-  align-content: center;
-  padding: 20px 100px 20px 100px;
-  font-family: 'Roboto', sans-serif;
-  white-space: pre-wrap;
-  text-align: center;
+	font-size: min(30px, 6vw);
+	align-content: center;
+	padding: 20px 100px 20px 100px;
+	font-family: "Roboto", sans-serif;
+	white-space: pre-wrap;
+	text-align: center;
 }
 
 .homeLogoDIV {
-  align-content: center;
-  margin: auto;
-  width: 40%;
-  height: auto;
-
+	align-content: center;
+	margin: auto;
+	width: 40%;
+	height: auto;
 }
-.homeLogo{
-    width: 100%;
-    height: auto;
-    
+.homeLogo {
+	width: 100%;
+	height: auto;
 }
