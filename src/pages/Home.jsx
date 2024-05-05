@@ -4,14 +4,14 @@ const Home = () => {
 
 	return (
 		<div className="contentContainer">
-			<div className="homeLogoDIV">
+			<div className="waxLogoContainer">
 				<img
 					src="src/assets/Wax-logo-transparent.png"
-					className="homeLogo"
+					className="waxLogo"
 				/>
 			</div>
 			<h1 className="heading">Welcome to WAX</h1>
-			<p className="homeDescription">{homeDescription}</p>
+			<p className="bodyText">{homeDescription}</p>
 		</div>
 	);
 };
