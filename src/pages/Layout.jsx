@@ -1,11 +1,7 @@
-import { Outlet, Link } from "react-router-dom";
-
-import { useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
 	const { pathname } = useLocation();
-
-	console.log("🔎 ~ ", pathname);
 
 	return (
 		<>
