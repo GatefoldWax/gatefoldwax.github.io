@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
+import "./AccountSettings.css"
 
 const supabase = createClient(
 	"https://jxkaizmyfxwrhbvundhm.supabase.co",
@@ -16,11 +17,6 @@ export default function AccountSettings() {
 			setSession(session);
 		});
 
-		//! for development only, remove upon completion of implementation of logout and account deletion
-		// if (session) {
-		// 	supabase.auth.signOut();
-		// }
-
 		const {
 			data: { subscription },
 		} = supabase.auth.onAuthStateChange((_event, session) => {
@@ -28,7 +24,19 @@ export default function AccountSettings() {
 		});
 
 		return () => subscription.unsubscribe();
-	}, []);
+	}, [session]);
+
+	const handleDeleteAccount = async () => {
+		const confirmation = await window.confirm("Are you sure you want to delete your account?");
+
+		console.log("🔎 ~ file: AccountSettings.jsx:32 ~ handleDeleteAccount ~ confirmation:", confirmation)
+
+
+
+		// const { error } = await supabase.rpc("delete_account");
+
+		// !error && supabase.auth.signOut();
+	};
 
 	if (!session) {
 		return (
@@ -42,6 +50,16 @@ export default function AccountSettings() {
 			</div>
 		);
 	} else {
-		return <div>Logged in!</div>;
+		return (
+			<div className="contentContainer">
+				<h1 className="heading">Manage your account!</h1>
+
+				<h2 className="subheading">Delete your account</h2>
+				<p className="bodyText">We're sad to see you go, we'd always be glad to have you back if you change your mind.</p>
+				<button className="button" onClick={handleDeleteAccount}>
+					Delete Account
+				</button>
+			</div>
+		);
 	}
 }
