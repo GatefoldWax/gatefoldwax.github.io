@@ -6,7 +6,7 @@ const Home = () => {
 		<div className="contentContainer">
 			<div className="waxLogoContainer">
 				<img
-					src="src/assets/Wax-logo-transparent.png"
+					src="https://jxkaizmyfxwrhbvundhm.supabase.co/storage/v1/object/public/public_assets/Logo/Wax-logo-transparent.png"
 					className="waxLogo"
 				/>
 			</div>
