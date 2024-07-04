@@ -15,7 +15,10 @@ function App() {
 					<Route path="account" element={<AccountSettings />} />
 
 					<Route path="privacy" element={<Privacy />} />
-					<Route path="account-created" element={<AccountCreation />} />
+					<Route
+						path="account-created"
+						element={<AccountCreation />}
+					/>
 					<Route path="*" element={<Home />} />
 				</Route>
 			</Routes>
